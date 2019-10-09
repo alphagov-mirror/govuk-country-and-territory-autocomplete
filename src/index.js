@@ -9,7 +9,8 @@ function suggestionTemplate (result) {
   const path = result && result.path
     ? ' (' + result.path + ')'
     : ''
-  return result && '<strong>' + result.name + '</strong>' + path
+  const text = result.name ? result.name : result
+  return result && '<strong>' + text + '</strong>' + path
 }
 
 function openregisterLocationPicker (opts) {
